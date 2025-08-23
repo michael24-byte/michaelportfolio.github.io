@@ -4,85 +4,163 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Michael T Butler | Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
-      background: #f9f9f9;
+      background: #f0f8ff;
       color: #333;
+      scroll-behavior: smooth;
     }
+
     header {
-      background: #222;
+      background: #004080;
       color: #fff;
-      padding: 30px;
+      padding: 50px 20px;
       text-align: center;
     }
+
+    header img {
+      width: 150px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
     header h1 {
-      margin: 0;
+      margin: 10px 0;
       font-size: 2.5em;
     }
+
     header p {
       margin: 5px 0 0;
       font-size: 1.2em;
     }
+
     nav {
-      background: #444;
-      padding: 10px;
+      background: #0066cc;
+      padding: 10px 0;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
+
     nav a {
       color: #fff;
-      margin: 0 15px;
+      margin: 0 20px;
       text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
     }
+
     nav a:hover {
-      text-decoration: underline;
+      color: #ffd700;
     }
+
     section {
       max-width: 900px;
       margin: 40px auto;
-      padding: 20px;
+      padding: 30px;
       background: #fff;
       border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
     }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     section h2 {
       border-bottom: 2px solid #eee;
       padding-bottom: 10px;
+      margin-bottom: 20px;
     }
+
     .project {
       margin-bottom: 20px;
     }
+
     .project h3 {
       margin: 0;
     }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      background: #0066cc;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    form button {
+      background: #004080;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    form button:hover {
+      background: #0066cc;
+    }
+
     footer {
-      background: #222;
+      background: #004080;
       color: #fff;
       text-align: center;
-      padding: 15px;
+      padding: 20px;
       margin-top: 40px;
     }
+
     footer a {
-      color: #0af;
+      color: #ffd700;
       text-decoration: none;
     }
   </style>
 </head>
 <body>
 
+  <!-- Header -->
   <header>
+    <img src="images/profile.jpg" alt="Michael Butler">
     <h1>Michael T Butler</h1>
     <p>Data Science | Python | Machine Learning</p>
   </header>
 
+  <!-- Navigation -->
   <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
   </nav>
 
+  <!-- About Section -->
   <section id="about">
     <h2>About Me</h2>
     <p>
@@ -92,35 +170,70 @@
     </p>
   </section>
 
+  <!-- Projects Section -->
   <section id="projects">
     <h2>Projects</h2>
 
     <div class="project">
-      <h3><a href="https://github.com/michaelbyte/Titanic-Survival" target="_blank">Titanic Survival Prediction</a></h3>
-      <p>Built a machine learning model to predict survival on the Titanic dataset using scikit-learn.</p>
+      <h3><a href="https://github.com/michael24-byte/my-projects" target="_blank">My Projects</a></h3>
+      <p>A collection of various projects showcasing my skills and learning journey in data science and machine learning.</p>
     </div>
 
     <div class="project">
-      <h3><a href="https://github.com/michaelbyte/Healthcare-ML" target="_blank">Healthcare Risk Prediction</a></h3>
-      <p>Analyzed healthcare data to predict disease risk zones in Liberia using Python.</p>
+      <h3><a href="https://github.com/michael24-byte/house-prices-linear-regression-techniques" target="_blank">House Prices Prediction</a></h3>
+      <p>Implemented multiple linear regression techniques to predict house prices based on various features.</p>
     </div>
 
     <div class="project">
-      <h3><a href="https://github.com/michaelbyte" target="_blank">More Projects →</a></h3>
-      <p>Check out more of my work on GitHub.</p>
+      <h3><a href="https://github.com/michael24-byte" target="_blank">More Projects →</a></h3>
+      <p>Explore additional projects and repositories on my GitHub profile.</p>
     </div>
   </section>
 
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">Python</div>
+      <div class="skill">Machine Learning</div>
+      <div class="skill">Data Analysis</div>
+      <div class="skill">Pandas</div>
+      <div class="skill">NumPy</div>
+      <div class="skill">Matplotlib</div>
+      <div class="skill">SQL</div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
   <section id="contact">
-    <h2>Contact</h2>
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/mvgqeeva" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="_replyto" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
     <p>Email: <a href="mailto:mb3746576@gmail.com">mb3746576@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/michaelbyte" target="_blank">github.com/michaelbyte</a></p>
+    <p>GitHub: <a href="https://github.com/michael24-byte" target="_blank">github.com/michael24-byte</a></p>
     <p>LinkedIn: <a href="https://linkedin.com/in/michael-t-butler-50aa86273" target="_blank">linkedin.com/in/michael-t-butler</a></p>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>© 2025 Michael T Butler</p>
   </footer>
 
+  <!-- Scroll Animation -->
+  <script>
+    const sections = document.querySelectorAll('section');
+    window.addEventListener('scroll', () => {
+      sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if(top < window.innerHeight - 100) sec.classList.add('visible');
+      });
+    });
+  </script>
+
 </body>
 </html>
+
