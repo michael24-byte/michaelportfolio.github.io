@@ -3,290 +3,122 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Michael T Butler | Portfolio</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
+  <title>Michael Butler | Portfolio</title>
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f0f8ff;
-      color: #333;
-      scroll-behavior: smooth;
+      font-family: Arial, sans-serif;
     }
-
-    header {
-      background: #004080;
-      color: #fff;
-      padding: 50px 20px;
-      text-align: center;
-    }
-
-    header img {
-      width: 150px;
-      border-radius: 50%;
-      margin-bottom: 20px;
-    }
-
-    header h1 {
-      margin: 10px 0;
-      font-size: 2.5em;
-    }
-
-    header p {
-      margin: 5px 0 0;
-      font-size: 1.2em;
-    }
-
-    nav {
-      background: #0066cc;
-      padding: 10px 0;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    nav a {
-      color: #fff;
-      margin: 0 20px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #ffd700;
-    }
-
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 30px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s ease;
-    }
-
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    section h2 {
-      border-bottom: 2px solid #eee;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
-    }
-
-    .project {
-      margin-bottom: 20px;
-    }
-
-    .project h3 {
-      margin: 0;
-    }
-
-    .skills {
+    .container {
       display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
+      min-height: 100vh;
     }
-
-    .skill {
-      background: #0066cc;
-      color: #fff;
-      padding: 8px 12px;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-
-    form input, form textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 8px 0;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-
-    form button {
-      background: #004080;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    form button:hover {
-      background: #0066cc;
-    }
-
-    footer {
-      background: #004080;
-      color: #fff;
-      text-align: center;
+    .left {
+      flex: 1;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       padding: 20px;
-      margin-top: 40px;
     }
-
-    footer a {
-      color: #ffd700;
+    .left img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+    .left h1 {
+      font-size: 28px;
+      margin: 20px 0 5px;
+    }
+    .left p {
+      font-size: 16px;
+      margin: 5px 0 15px;
+    }
+    .email-btn {
+      background: black;
+      color: white;
+      padding: 12px 24px;
       text-decoration: none;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
     }
-    .certificate {
-  margin-bottom: 20px;
-  padding: 15px;
-  border-left: 4px solid #0066cc;
-  background: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-}
-
-.certificate h3 {
-  margin: 0 0 8px;
-  color: #004080;
-}
-
-.certificate a {
-  display: inline-block;
-  margin-top: 8px;
-  padding: 6px 12px;
-  background: #0066cc;
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: 0.3s;
-}
-
-.certificate a:hover {
-  background: #004080;
-}
-
+    .right {
+      flex: 1;
+      background: #b3d9ff;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .right h2 {
+      font-size: 22px;
+      margin-bottom: 5px;
+    }
+    .line {
+      width: 100%;
+      height: 1px;
+      background: black;
+      margin: 10px 0 20px;
+    }
+    .right p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .buttons {
+      margin: 20px 0;
+    }
+    .buttons a {
+      display: inline-block;
+      margin: 5px;
+      padding: 10px 20px;
+      border: 1px solid black;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+    .socials {
+      margin-top: auto;
+      font-size: 22px;
+    }
+    .socials a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: black;
+    }
   </style>
 </head>
 <body>
-
-  <!-- Header -->
-  <header>
-    <img src="images/profile.jpg" alt="Michael Butler">
-    <h1>Michael T Butler</h1>
-    <p>Data Science | Python | Machine Learning</p>
-  </header>
-
-  <!-- Navigation -->
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      Hi 👋, I’m Michael, a data science enthusiast passionate about solving real-world problems 
-      with Python and machine learning. I’ve worked on projects involving classification, regression, 
-      clustering, and time series analysis. I enjoy learning, building, and sharing knowledge.
-    </p>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-
-    <div class="project">
-      <h3><a href="https://github.com/michael24-byte/my-projects" target="_blank">My Projects</a></h3>
-      <p>A collection of various projects showcasing my skills and learning journey in data science and machine learning.</p>
+  <div class="container">
+    <!-- LEFT SIDE -->
+    <div class="left">
+      <img src="images/profile.jpg" alt="Profile Photo">
+      <h1>Michael Butler</h1>
+      <p>Data Science Enthusiast | Healthcare Background</p>
+      <a href="mailto:your-email@example.com" class="email-btn">EMAIL ME</a>
     </div>
 
-    <div class="project">
-      <h3><a href="https://github.com/michael24-byte/house-prices-linear-regression-techniques" target="_blank">House Prices Prediction</a></h3>
-      <p>Implemented multiple linear regression techniques to predict house prices based on various features.</p>
+    <!-- RIGHT SIDE -->
+    <div class="right">
+      <h2>About Me</h2>
+      <div class="line"></div>
+      <p>
+        I am passionate about the intersection of data science and healthcare.  
+        With experience in healthcare management and hands-on data science projects,  
+        I enjoy solving real-world problems and exploring innovative solutions.  
+        Always eager to learn and collaborate on meaningful projects.
+      </p>
+      <div class="buttons">
+        <a href="resume.pdf" target="_blank">Resume</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="certificates.html">Certificates</a>
+      </div>
+      <div class="socials">
+        <a href="https://github.com/michaelbyte" target="_blank">🐙</a>
+        <a href="https://linkedin.com/in/your-profile" target="_blank">💼</a>
+        <a href="https://twitter.com/your-handle" target="_blank">🐦</a>
+      </div>
     </div>
-
-    <div class="project">
-      <h3><a href="https://github.com/michael24-byte" target="_blank">More Projects →</a></h3>
-      <p>Explore additional projects and repositories on my GitHub profile.</p>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-      <div class="skill">Python</div>
-      <div class="skill">Machine Learning</div>
-      <div class="skill">Data Analysis</div>
-      <div class="skill">Pandas</div>
-      <div class="skill">NumPy</div>
-      <div class="skill">Matplotlib</div>
-      <div class="skill">SQL</div>
-    </div>
-  </section>
-
-  <section id="certificates">
-  <h2>Certificates</h2>
-
-  <div class="certificate">
-    <h3>Applied Data Science Lab</h3>
-    <p>Completed hands-on projects in data science, applying regression, classification, and machine learning techniques.</p>
-    <a href="AppliedDataScienceLab20250415-29-h4vxng.pdf" target="_blank">View Certificate</a>
   </div>
-
-  <div class="certificate">
-    <h3>CS106A: Programming Methodology</h3>
-    <p>Stanford course covering programming fundamentals, problem-solving, and algorithmic thinking.</p>
-    <a href="CS106A Programming Methodologie.pdf" target="_blank">View Certificate</a>
-  </div>
-
-  <div class="certificate">
-    <h3>Python for Everybody Specialization</h3>
-    <p>University of Michigan specialization focused on Python programming, data access, and databases.</p>
-    <a href="Python For Everybody Specialization.pdf" target="_blank">View Certificate</a>
-  </div>
-</section>
-
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/mvgqeeva" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="_replyto" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-    <p>Email: <a href="mailto:mb3746576@gmail.com">mb3746576@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/michael24-byte" target="_blank">github.com/michael24-byte</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/michael-t-butler-50aa86273" target="_blank">linkedin.com/in/michael-t-butler</a></p>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Michael T Butler</p>
-  </footer>
-  
-  <!-- Scroll Animation -->
-  <script>
-    const sections = document.querySelectorAll('section');
-    window.addEventListener('scroll', () => {
-      sections.forEach(sec => {
-        const top = sec.getBoundingClientRect().top;
-        if(top < window.innerHeight - 100) sec.classList.add('visible');
-      });
-    });
-  </script>
-
 </body>
 </html>
-
